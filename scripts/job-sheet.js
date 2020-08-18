@@ -1,5 +1,3 @@
-
-
 // creates JobItem instances. 
 export class JobItem {
     
@@ -23,13 +21,13 @@ export class JobItem {
         if (!duration) {
             throw new Error (`No duration provided, received ${duration}`)
         }    
-        if (typeof duration !== number) {
+        if (typeof duration !== 'number') {
             throw new Error (`Duration should be a number, received ${duration}`)
         }
         if (!cashAmount) {
             throw new Error (`No cash amount provided, received ${cashAmount}`)
         }    
-        if (typeof cashAmount !== number) {
+        if (typeof cashAmount !== 'number') {
             throw new Error (`Cash amount should be a number, received ${cashAmount}`)
         }
         // unique number for id
@@ -55,7 +53,7 @@ export class JobItem {
 
 
 // creates app that controls JobItem instances
-class JobSheet {
+export default class JobSheet {
     // private field
     #items = [];
 
@@ -71,11 +69,11 @@ class JobSheet {
         }
 
         for (const itemData of itemsDataArray) {
-            this.#itemspush(new JobItem(itemData));
+            this.#items.push(new JobItem(itemData));
         }
     }
 
-    // get all items
+    // get all job items and return a copy of the array
     getAllItems() {
         return this.#items.slice();
     }

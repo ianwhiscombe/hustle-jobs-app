@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+
+
+    <script type="module" src="/scripts/main.js"></script>
+
+    <title>Odd Jobs</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Odd Jobs</a>
+            <!-- nav bar toggle button -->
+            <button type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <!-- nav bar menu collapsed -->
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="/admin/index.html">Admin Page</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <h2>Listed Jobs: <span id="job-count">0</span>.</h2>
+        <ul id="job-card-mount"></ul>
+    </main>
+
+    <footer>
+        <small>Ian Whiscombe 2020</small>
+    </footer>
+
+    
+</body>
+</html>
