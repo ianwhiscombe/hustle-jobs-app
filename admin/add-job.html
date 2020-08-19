@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <script type="module" src="/admin/scripts/admin.js"></script>
+
+    <title>Odd Jobs: Add Job</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Odd Jobs</a>
+            <!-- nav bar toggle button -->
+            <button type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <!-- nav bar menu collapsed -->
+            <div>
+                <ul>
+                    <li>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="/admin/index.html">Admin Page</a>
+                    </li>
+                    <li>
+                        <a href="/admin/add-job.html">Add New Job</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Add New Job</h1>
+
+        <form name="add-form">
+            <label for="name">Job Name/Description</label>
+            <input type="text" name="name" id="name">
+
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location">
+
+            <label for="duration">Expected Job Duration</label>
+            <input type="text" name="duration" id="duration">
+
+            <label for="pay">Pay</label>
+            <input type="text" name="pay" id="pay">
+
+            <button type="reset">Reset</button>
+            <button type="submit">Add Job</button>
+        </form>
+    </main>
+
+    <footer>
+        <small>Ian Whiscombe 2020</small>
+    </footer>
+    
+</body>
+</html>
