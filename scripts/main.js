@@ -68,4 +68,4 @@ const placeholderJobs = [
 const myJobSheetApp = new JobSheet(placeholderJobs)
 console.log("render -> myJobSheetApp", myJobSheetApp)
 
-render(myJobSheetApp)
+render()
