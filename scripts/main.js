@@ -7,10 +7,11 @@ const mountNode = document.getElementById('job-card-mount');
 const countNode = document.getElementById('job-count');
 
 function render() {
+    // const jobItems = jobList
     const jobItems = jobsheet.getAllItems();
+    console.log("render -> jobItems", jobItems)
 
     const fragment = document.createDocumentFragment();
-    console.log("render -> fragment", fragment)
 
     for (const item of jobItems) {
         const li = document.createElement('li');
@@ -63,6 +64,7 @@ const placeholderJobs = [
     }
 ]
 
+// testing
 const myJobSheetApp = new JobSheet(placeholderJobs)
 console.log("render -> myJobSheetApp", myJobSheetApp)
 
