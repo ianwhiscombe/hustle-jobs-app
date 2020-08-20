@@ -9,7 +9,7 @@
 
     <script type="module" src="/admin/scripts/admin.js"></script>
 
-    <title>Odd Jobs: Admin Page</title>
+    <title>Odd Jobs: My Account</title>
 </head>
 <body>
     <header>
@@ -25,7 +25,7 @@
                         <a href="/index.html">Home</a>
                     </li>
                     <li>
-                        <a href="/admin/index.html">Admin Page</a>
+                        <a href="/admin/index.html">My Account</a>
                     </li>
                     <li>
                         <a href="/admin/add-job.html">Add New Job</a>
@@ -37,11 +37,11 @@
     </header>
 
     <main>
-        <h1>Odd Jobs Admin Page</h1>
+        <h1>My Account</h1>
         <p>Add new jobs. Update and delete your existing jobs.</p>
-        <p><span id="job-count"></span> jobs posted.</p>
+        <p>You've posted <span id="job-count"></span> jobs.</p>
         <a href="/admin/add-job.html">Add New Job</a>
-        <button id="clearData">Clear Local Storage</button>
+        <button id="clearData">Delete All Jobs</button>
         <ul id="job-card-mount"></ul>
     </main>
 

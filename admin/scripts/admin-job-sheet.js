@@ -42,11 +42,12 @@ export default class AdminJobSheet {
             );
         }
         const index = this.#items.findIndex((item) => {
-            return item._id === id;
+        console.log("AdminJobSheet -> getItemIndex -> item", item)
+            return item.id === id;
         });
     
         if (!~index) {
-            log(`Item with _id of ${id} not found`);
+            console.log(`Item with _id of ${id} not found`);
         }
         return index;
     }
@@ -62,13 +63,14 @@ export default class AdminJobSheet {
     }
 
     addItem(itemData) {
+    console.log("AdminJobSheet -> addItem -> itemData", itemData)
         
         if (!itemData) {
             throw new Error(`No data provided to addItem: received ${itemData}`);
         }
     
-        
         const newItem = new JobItem(itemData);
+        console.log("AdminJobSheet -> addItem -> newItem", newItem)
     
         // push it into our internal array
         this.#items.push(newItem);
@@ -76,6 +78,7 @@ export default class AdminJobSheet {
         this.save();
     
         // Return the finished product for reference
+        console.log("AdminJobSheet -> addItem -> newItem", newItem)
         return { ...newItem };
     }
 

@@ -21,13 +21,13 @@ export class JobItem {
         if (!duration) {
             throw new Error (`No duration provided, received ${duration}`)
         }    
-        if (typeof duration !== 'number') {
+        if (typeof duration !== 'string') {
             throw new Error (`Duration should be a number, received ${duration}`)
         }
         if (!cashAmount) {
             throw new Error (`No cash amount provided, received ${cashAmount}`)
         }    
-        if (typeof cashAmount !== 'number') {
+        if (typeof cashAmount !== 'string') {
             throw new Error (`Cash amount should be a number, received ${cashAmount}`)
         }
         // unique number for id
@@ -51,11 +51,44 @@ export class JobItem {
     }
 }
 
+// Hardcoded placeholder jobs to provide examples when app loads.
+
+const placeholderJobs = [
+    {
+        id: '92d2f527-a732-489f-bebf-807febdf521',
+        name: 'Leaking roof needs fixing',
+        location: 'Rowhedge, Colchester',
+        duration: '4',
+        cashAmount: '300'
+    },
+    {
+        id: '92d2f527-a732-489f-bebf-807febdf522',
+        name: 'Six dogs need walking, must be prepared to pick up their shit as well.',
+        location: 'Brightlingsea',
+        duration: '2',
+        cashAmount: '50'
+    },
+    {
+        id: '92d2f527-a732-489f-bebf-807febdf523',
+        name: 'Fences need painting',
+        location: 'Rowhedge, Colchester',
+        duration: '3',
+        cashAmount: '80'
+    },
+    {
+        id: '92d2f527-a732-489f-bebf-807febdf524',
+        name: 'Patio and driveway need powerhosing',
+        location: 'Rowhedge, Colchester',
+        duration: '3',
+        cashAmount: '60'
+    }
+]
+
 
 // creates app that controls JobItem instances
 export default class JobSheet {
     // private field
-    #items = [];
+    #items = [...placeholderJobs];
 
     constructor(itemsDataArray = []) {
         if (!Array.isArray(itemsDataArray)) {
@@ -63,6 +96,7 @@ export default class JobSheet {
         }
 
         const stored = JSON.parse(localStorage.getItem("items")) || [];
+        console.log("JobSheet -> constructor -> stored", stored)
 
         for (const item of stored) {
             this.#items.push(item);

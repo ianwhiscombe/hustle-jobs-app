@@ -23,49 +23,22 @@ function render() {
         <span>${item.duration}</span><br>
         <span>£${Number(
             item.cashAmount
-        ).toLocaleString('en-gb', {
-            minimumFractionDigits: 2,
-        })}}</span><br>
+        ).toLocaleString('en-gb')}</span><br>
+        <div>
+            <button class="button-accept">
+                Accept
+            </button>
+            <button class="button-reject">
+                Reject
+            </button>
+        </div>
         `
-        fragment.append(li);
+        fragment.prepend(li);
     }
 
     mountNode.innerHTML = '';
     mountNode.append(fragment);
     countNode.textContent = jobItems.length;
 }
-
-// placeholder jobs
-
-const placeholderJobs = [
-    {
-        name: 'Leaking roof needs fixing',
-        location: 'Rowhedge, Colchester',
-        duration: 120,
-        cashAmount: 300
-    },
-    {
-        name: 'Six dogs need walking, must be prepared to pick up their shit as well.',
-        location: 'Brightlingsea',
-        duration: 60,
-        cashAmount: 50
-    },
-    {
-        name: 'Fences need painting',
-        location: 'Rowhedge, Colchester',
-        duration: 180,
-        cashAmount: 210
-    },
-    {
-        name: 'Patio and driveway need powerhosing',
-        location: 'Rowhedge, Colchester',
-        duration: 120,
-        cashAmount: 60
-    }
-]
-
-// testing
-const myJobSheetApp = new JobSheet(placeholderJobs)
-console.log("render -> myJobSheetApp", myJobSheetApp)
 
 render()
