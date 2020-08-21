@@ -115,6 +115,7 @@ export default class AdminJobSheet {
     }
 
     removeItem(id) {
+        console.log('removeItem firing')
         if (!id) {
             throw new Error(`No id provided to removeItem: received ${id}`);
         }
@@ -124,6 +125,7 @@ export default class AdminJobSheet {
         }
         const deleted = this.#items.splice(index, 1);
         this.save();
+        console.log('save called')
         return deleted;
     }
 

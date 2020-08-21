@@ -65,8 +65,6 @@ if (mountNode) {
         console.log(`id for deletion: ${id}`);
         jobSheet.removeItem(id);
         target.closest("li").remove();
-        } else {
-            console.log('target not matched')
         }
     });
 }
