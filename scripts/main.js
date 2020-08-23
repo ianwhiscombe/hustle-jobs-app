@@ -14,21 +14,24 @@ function render() {
     const fragment = document.createDocumentFragment();
 
     for (const item of jobItems) {
-        const li = document.createElement('li');
+        const div = document.createElement('div');
         // adds class for bootstrap
-        // li.classList.add('list-group-item')
-        li.innerHTML = `
-        <span>${item.name}</span><br>
-        <span>${item.location}</span><br>
-        <span>${item.duration}</span><br>
-        <span>£${Number(
-            item.cashAmount
-        ).toLocaleString('en-gb')}</span><br>
-        <div>
-            <a href="mailto:example@example.com">Contact Job Poster</a>
+        div.classList.add('card', 'card-body')
+        div.setAttribute('style', 'width: 220px;')
+        div.innerHTML = `
+        <div class="card-main">
+            <h3 class="card-title">${item.location}</h3>
+            <h4 class="card-subtitle text-muted">${item.duration} hours, £${Number(
+                item.cashAmount
+            ).toLocaleString('en-gb')}</h4>
+            <p class="card-text">${item.name}</p>
         </div>
+        <div class="card-foot">
+            <a class="btn btn-primary" href="mailto:example@example.com">Contact Job Poster</a>
+        </div>
+        
         `
-        fragment.prepend(li);
+        fragment.prepend(div);
     }
 
     mountNode.innerHTML = '';

@@ -65,3 +65,28 @@ ul.typographic {
 }
 
   /* Project Specific Rules */
+
+.card-subtitle {
+    margin-bottom: 1rem;
+}
+#job-card-mount {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, 275px, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    /* grid-gap: 1rem; */
+    grid-auto-rows: auto;
+    justify-items: center;
+
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+}
+.card {
+    margin: 1rem;
+    justify-content: space-between;
+    min-height: 230px;
+}
+.btn {
+    width: fit-content;
+}
