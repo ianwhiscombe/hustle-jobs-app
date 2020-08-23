@@ -3,12 +3,23 @@ import AdminJobSheet from './admin-job-sheet.js'
 const jobSheet = new AdminJobSheet();
 console.log("jobSheet", jobSheet)
 const clearButton = document.getElementById("clearData");
+const jobCount = jobSheet.getAllItems().length;
 
 if (clearButton) {
     clearButton.addEventListener('click', (event) => {
         event.stopPropagation();
         jobSheet.removeAllItems();
         render();
+        GrowlNotification.notify({
+            title: 'Success!',
+            description: `${jobCount} job(s) deleted.`,
+            image: {visible: true,
+                    customImage: '../../assets/icons/success-outline.svg'}, 
+            type: 'success',
+            position: 'top-center',
+            showProgress: true,
+            closeTimeout: 2300
+        });
     });
 }
 
@@ -65,6 +76,16 @@ if (mountNode) {
         console.log(`id for deletion: ${id}`);
         jobSheet.removeItem(id);
         target.closest("li").remove();
+        GrowlNotification.notify({
+            title: 'Success!',
+            description: `Job has been deleted.`,
+            image: {visible: true,
+                    customImage: '../../assets/icons/success-outline.svg'}, 
+            type: 'success',
+            position: 'top-center',
+            showProgress: true,
+            closeTimeout: 2300
+        });
         }
     });
 }
@@ -79,6 +100,30 @@ if (addForm) {
         console.log("add data", data);
         jobSheet.addItem(data);
         addForm.reset();
+        GrowlNotification.notify({
+            title: 'Success!',
+            description: `Your job has been added.`,
+            image: {visible: true,
+                    customImage: '../../assets/icons/success-outline.svg'}, 
+            type: 'success',
+            position: 'top-center',
+            showButtons: true,
+            buttons: {
+                action: {
+                    text: 'View Job',
+                    callback: function() {
+                        console.log('hello')
+                        window.location.replace('/admin/index.html')
+                    }
+                },
+                cancel: {
+                    text: 'Add New Job',
+                    // callback: function() {} 
+                }
+            },
+        });
+
+        
     });
 }
 

@@ -25,12 +25,7 @@ function render() {
             item.cashAmount
         ).toLocaleString('en-gb')}</span><br>
         <div>
-            <button class="button-accept">
-                Accept
-            </button>
-            <button class="button-reject">
-                Reject
-            </button>
+            <a href="mailto:example@example.com">Contact Job Poster</a>
         </div>
         `
         fragment.prepend(li);
