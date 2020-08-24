@@ -56,7 +56,7 @@ export class JobItem {
 const placeholderJobs = [
     {
         id: '92d2f527-a732-489f-bebf-807febdf521',
-        name: 'Leaking roof needs fixing',
+        name: 'Leaking roof needs fixing, tiles missing. Might be longer than 4 hours, will pay the extra.',
         location: 'Rowhedge, Colchester',
         duration: '4',
         cashAmount: '300'
@@ -64,23 +64,37 @@ const placeholderJobs = [
     {
         id: '92d2f527-a732-489f-bebf-807febdf522',
         name: 'Six dogs need walking, must be prepared to pick up their shit as well.',
-        location: 'Brightlingsea',
+        location: 'Wymondham, Norfolk',
         duration: '2',
         cashAmount: '50'
     },
     {
         id: '92d2f527-a732-489f-bebf-807febdf523',
-        name: 'Fences need painting',
-        location: 'Rowhedge, Colchester',
+        name: 'Fences need making, installing and painting. I\'ve got paint ready but nothing else.',
+        location: 'Colchester, Essex',
         duration: '3',
         cashAmount: '80'
     },
     {
         id: '92d2f527-a732-489f-bebf-807febdf524',
-        name: 'Patio and driveway need powerhosing',
+        name: 'Patio and driveway need power-hosing. Can you bring your own hose.',
         location: 'Rowhedge, Colchester',
         duration: '3',
         cashAmount: '60'
+    },
+    {
+        id: '92d2f527-a732-489f-bebf-807febdf525',
+        name: 'Tall hedges need cutting, about 4 metres high. Cuttings should be taken with you as well.',
+        location: 'Chelmsford, Essex',
+        duration: '4',
+        cashAmount: '100'
+    },
+    {
+        id: '92d2f527-a732-489f-bebf-807febdf526',
+        name: 'Moving house, can someone pack up my whole house safely for me and take to new property. Should have your own truck.',
+        location: 'Chelmsford, Essex',
+        duration: '4',
+        cashAmount: '100'
     }
 ]
 
