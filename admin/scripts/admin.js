@@ -35,20 +35,22 @@ function render() {
 
     for (const item of jobItems) {
         const li = document.createElement('li');
-        // adds class for bootstrap
-        // li.classList.add('list-group-item')
+        li.classList.add('card', 'card-body')
+        li.setAttribute('style', 'width: 220px;')
+
         li.innerHTML = `
-        <span>${item.name}</span><br>
-        <span>${item.location}</span><br>
-        <span>${item.duration}</span><br>
-        <span>£${Number(
-            item.cashAmount
-        ).toLocaleString('en-gb')}</span><br>
-        <div>
-            <a href="/admin/update-job.html?id=${item.id}">
+        <div class="card-main">
+            <h3 class="card-title">${item.location}</h3>
+            <h4 class="card-subtitle text-muted">${item.duration} hours, £${Number(
+                item.cashAmount
+            ).toLocaleString('en-gb')}</h4>
+            <p class="card-text">${item.name}</p>
+        </div>
+        <div class="card-foot">
+            <a class="btn btn-link btn-lg" href="/admin/update-job.html?id=${item.id}">
                 <span>Update</span>
             </a>
-            <button class="delete" data-id="${item.id}">
+            <button class="delete btn btn-danger btn-lg" data-id="${item.id}">
                 Delete
             </button>
         </div>

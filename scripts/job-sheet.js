@@ -63,7 +63,7 @@ const placeholderJobs = [
     },
     {
         id: '92d2f527-a732-489f-bebf-807febdf522',
-        name: 'Six dogs need walking, must be prepared to pick up their shit as well.',
+        name: 'Six dogs need walking, must be prepared to pick up their poo as well.',
         location: 'Wymondham, Norfolk',
         duration: '2',
         cashAmount: '50'

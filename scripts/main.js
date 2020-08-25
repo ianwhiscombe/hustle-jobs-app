@@ -7,7 +7,6 @@ const mountNode = document.getElementById('job-card-mount');
 const countNode = document.getElementById('job-count');
 
 function render() {
-    // const jobItems = jobList
     const jobItems = jobsheet.getAllItems();
     console.log("render -> jobItems", jobItems)
 
@@ -15,7 +14,6 @@ function render() {
 
     for (const item of jobItems) {
         const div = document.createElement('div');
-        // adds class for bootstrap
         div.classList.add('card', 'card-body')
         div.setAttribute('style', 'width: 220px;')
         div.innerHTML = `
