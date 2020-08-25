@@ -71,14 +71,14 @@ const placeholderJobs = [
     {
         id: '92d2f527-a732-489f-bebf-807febdf523',
         name: 'Fences need making, installing and painting. I\'ve got paint ready but nothing else.',
-        location: 'Colchester, Essex',
+        location: 'Ipswich, Suffolk',
         duration: '3',
         cashAmount: '80'
     },
     {
         id: '92d2f527-a732-489f-bebf-807febdf524',
         name: 'Patio and driveway need power-hosing. Can you bring your own hose.',
-        location: 'Rowhedge, Colchester',
+        location: 'Wivenhoe, Colchester',
         duration: '3',
         cashAmount: '60'
     },
@@ -91,8 +91,8 @@ const placeholderJobs = [
     },
     {
         id: '92d2f527-a732-489f-bebf-807febdf526',
-        name: 'Moving house, can someone pack up my whole house safely for me and take to new property. Should have your own truck.',
-        location: 'Chelmsford, Essex',
+        name: 'Moving house, can someone pack up my whole house safely for me and take to new property.',
+        location: 'Brentwood, Essex',
         duration: '4',
         cashAmount: '100'
     }

@@ -20,12 +20,13 @@ a {
     color: inherit;
     text-decoration: none;
 }
-/*
+
     a:hover,
     a:focus {
         text-decoration: underline;
+        color: #F9FBFB;
     }
-    */
+   
 
 img {
     max-width: 100%;
@@ -33,7 +34,7 @@ img {
     vertical-align: middle;
 }
 
-ul {
+ul, ol {
     list-style: none;
     padding-left: 0;
 }
@@ -66,6 +67,12 @@ ul.typographic {
 
   /* Project Specific Rules */
 
+body {
+    color: #2A2E44;
+    background-color: #F9FBFB;
+    font-family: 'Lato', sans-serif;
+}
+
 .card-subtitle {
     margin-bottom: 1rem;
 }
@@ -73,7 +80,7 @@ ul.typographic {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, 275px, 1fr); */
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    /* grid-gap: 1rem; */
+    grid-gap: 1rem;
     grid-auto-rows: auto;
     justify-items: center;
 
@@ -86,7 +93,112 @@ ul.typographic {
     margin: 1rem;
     justify-content: space-between;
     min-height: 230px;
+    background-color: #F9FBFB;
+    border: 0;
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+    border-radius: 2px;
+    border-top: 6px solid #2A2E44;
+}
+.card-text {
+    font-size: 1.5rem;
 }
 .btn {
     width: fit-content;
+    color: #F9FBFB;
+    background-color: #DB4949;
+    border: #DB4949;
+}
+.btn:hover {
+    color: #F9FBFB;
+    background-color: #2A2E44;
+    border: #2A2E44;
+}
+.hero {
+    height: 250px;
+    background: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/assets/images/outside.svg);
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+#job-count-wrapper {
+    font-size: 2rem;
+    /* background: url(/assets/images/brush-stroke-banner-7.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 40px; 
+    */
+    /* width: fit-content; 
+    color: #F9FBFB;  
+    background-color: #DB4949; */
+}
+.hero-list, .hero-two-text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.2rem;
+}
+.hero-two {
+    background-image: url(/assets/images/catandfriend.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-bottom: 35px;
+    /* text alignment */
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-two-text {
+    padding-top: 43px;
+}
+/* push nav bar links to right (bootstrap override on !important) */
+.mr-auto, .mx-auto {
+    margin-right: 5px!important;
+    margin-left: auto;
+}
+.navbar {
+    margin-bottom: 35px;
+    background-color: #DB4949;
+    color: #F9FBFB;
+    box-shadow: rgba(0, 0, 0, 0.42) 0px 10px 20px -12px, rgba(0, 0, 0, 0.12) 0px 3px 20px 0px, rgba(0, 0, 0, 0.2) 0px 8px 10px -5px;
+}
+.navbar-brand {
+    font-family: 'Rubik', serif;
+    font-size: 2rem;
+}
+.nav-item {
+    margin-left: 1rem;
+}
+.navbar-toggler {
+    border-color: #F9FBFB;
+    padding: 0.55rem 0.75rem;
+    font-size: 1.55rem;
+}
+.fa-bars {
+    color: #F9FBFB;
+}
+.fa-kiwi-bird {
+    font-size: 3rem;
+    margin-right: 10px;
+}
+.job-board {
+    margin-bottom: 60px;
+    
+}
+.job-board-wrapper {
+    background-color: #f9fbfb;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+footer {
+    font-family: 'Rubik', serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #DB4949;
+    color: #F9FBFB;
+    box-shadow: inset rgba(0, 0, 0, 0.42) 0px 10px 20px -12px, rgba(0, 0, 0, 0.12) 0px 3px 20px 0px, rgba(0, 0, 0, 0.2) 0px 8px 10px -5px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
 }

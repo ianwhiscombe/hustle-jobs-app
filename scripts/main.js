@@ -27,7 +27,7 @@ function render() {
             <p class="card-text">${item.name}</p>
         </div>
         <div class="card-foot">
-            <a class="btn btn-primary" href="mailto:example@example.com">Contact Job Poster</a>
+            <a class="btn btn-primary btn-lg" href="mailto:example@example.com">Contact Host</a>
         </div>
         
         `
