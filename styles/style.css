@@ -26,7 +26,6 @@ a {
         text-decoration: underline;
         color: #F9FBFB;
     }
-   
 
 img {
     max-width: 100%;
@@ -164,7 +163,7 @@ body {
 .btn:hover {
     color: #F9FBFB;
     background-color: #2A2E44;
-    border: #2A2E44;
+    border-color: #2A2E44;
 }
 
 .hero-two {
@@ -192,4 +191,66 @@ footer {
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
+}
+/* Account page styling */
+
+.account-buttons-wrapper {
+    margin-bottom: 50px;    
+}
+.add-job-link:hover,
+.add-job-link:focus {
+        text-decoration: underline;
+        color: #2A2E44;
+}
+.account-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}   
+.account-hero-image {
+    background-image: url(/assets/images/account-profile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+}
+@media only screen and (max-width: 600px) {
+    .account-hero-image {
+        display: none;
+    }
+}
+
+.btn-link {
+    color: #2A2E44;
+}
+.btn-link:hover {
+    text-decoration: none;
+}
+
+/* add job styling */
+.add-job-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+}
+.form-hero {
+    background-image: url(/assets/images/form.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+    margin-left: 2rem;
+}
+@media only screen and (max-width: 600px) {
+    .add-job-wrapper {
+        display: block;
+    }
+    .form-hero {
+        margin: 0;
+    }
+    .form-wrapper {
+        margin-bottom: 35px;
+    }
 }

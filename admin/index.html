@@ -45,10 +45,14 @@
     </header>
 
     <main>
-        <div class="container">
-            <h1>My Account</h1>
-            <p>View, update and delete any jobs you posted.</p>
-            <p>You've posted <span id="job-count"></span> job(s).</p>
+        <div class="account-hero container">
+            <div>
+                <h1>My Account</h1>
+                <p>View, update and delete any jobs you posted.</p>
+                <p>You've posted <span id="job-count"></span> job(s).</p>
+                <a class="add-job-link" href="/admin/add-job.html">Post New Job</a>
+            </div>
+            <div class="account-hero-image"></div>
         </div>
         
         <div class="job-board-wrapper">
@@ -57,8 +61,7 @@
             </div>
         </div>
 
-        <div class="container">
-            <a class="btn btn-link btn-lg" href="/admin/add-job.html">Post New Job</a>
+        <div class="account-buttons-wrapper container">
             <button class="delete btn btn-danger btn-lg" id="clearData">Delete All Jobs</button>
         </div>
 

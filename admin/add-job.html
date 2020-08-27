@@ -22,22 +22,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/index.html">Odd Jobs</a>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="/index.html"><i class="fas fa-kiwi-bird"></i>HUSTLE JOBS</a>
             <!-- nav bar toggle button -->
-            <button type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
             <!-- nav bar menu collapsed -->
-            <div>
-                <ul>
-                    <li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
                         <a href="/index.html">Home</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="/admin/index.html">My Account</a>
-                    </li>
-                    <li>
-                        <a href="/admin/add-job.html">Add New Job</a>
                     </li>
                 </ul>
             </div>
@@ -46,28 +43,44 @@
     </header>
 
     <main>
-        <h1>Add New Job</h1>
-
-        <form name="add-form">
-            <label for="name">Job Name/Description</label>
-            <input type="text" name="name" id="name">
-
-            <label for="location">Location</label>
-            <input type="text" name="location" id="location">
-
-            <label for="duration">Expected Job Duration (whole hours only)</label>
-            <input type="number" name="duration" id="duration">
-
-            <label for="cashAmount">Pay</label>
-            <input type="number" name="cashAmount" id="cashAmount">
-
-            <button type="reset">Reset</button>
-            <button type="submit">Add Job</button>
-        </form>
+        <div class="container add-job-wrapper">
+            <div class="form-wrapper">
+                <h1>Add New Job</h1>
+        
+                <form name="add-form">
+                    <div class="form-group">
+                        <label for="name">Job Description</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="location">Job Location</label>
+                        <input type="text" name="location" id="location" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="duration">Expected Job Duration (whole hours only)</label>
+                        <input type="number" name="duration" id="duration" class="form-control">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="cashAmount">Total Pay</label>
+                        <input type="number" name="cashAmount" id="cashAmount" class="form-control">
+                    </div>
+        
+                    <button type="reset" class="btn btn-secondary btn-lg">Reset</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Add Job</button>
+                </form>
+            </div>
+            <div class="form-hero"></div>
+        </div>
     </main>
 
     <footer>
-        <small>Ian Whiscombe 2020</small>
+        <div class="footer-wrapper container">
+            <a href="#">HUSTLE JOBS</a>
+            <small>Ian Whiscombe &copy 2020</small>
+        </div>
     </footer>
     
 </body>
