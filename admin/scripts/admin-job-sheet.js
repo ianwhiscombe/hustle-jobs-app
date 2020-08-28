@@ -1,10 +1,9 @@
 import { JobItem } from './../../scripts/job-sheet.js'
 
 export default class AdminJobSheet {
-    // private field
-    items = [];
 
     constructor(itemsDataArray = []) {
+        this.items = [];
         if (!Array.isArray(itemsDataArray)) {
             throw new Error (`Items must be an array, received ${itemsDataArray} (${typeof item})`);
         }

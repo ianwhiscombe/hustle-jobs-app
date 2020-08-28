@@ -101,10 +101,9 @@ const placeholderJobs = [
 
 // creates app that controls JobItem instances
 export default class JobSheet {
-    // private field
-    items = [...placeholderJobs];
 
     constructor(itemsDataArray = []) {
+        this.items = [...placeholderJobs];
         if (!Array.isArray(itemsDataArray)) {
             throw new Error (`Items must be an array, received ${itemsDataArray} (${typeof item})`);
         }
