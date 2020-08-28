@@ -2,7 +2,7 @@ import { JobItem } from './../../scripts/job-sheet.js'
 
 export default class AdminJobSheet {
     // private field
-    #items = [];
+    items = [];
 
     constructor(itemsDataArray = []) {
         if (!Array.isArray(itemsDataArray)) {
@@ -12,21 +12,21 @@ export default class AdminJobSheet {
         const stored = JSON.parse(localStorage.getItem("items")) || [];
 
         for (const item of stored) {
-            this.#items.push(item);
+            this.items.push(item);
         }
 
         for (const itemData of itemsDataArray) {
-            this.#items.push(new JobItem(itemData));
+            this.items.push(new JobItem(itemData));
         }
     }
 
     // get all job items and return a copy of the array
     getAllItems() {
-        return this.#items.slice();
+        return this.items.slice();
     }
 
     removeAllItems() {
-        this.#items.length = 0;
+        this.items.length = 0;
         this.save();
     }
 
@@ -41,7 +41,7 @@ export default class AdminJobSheet {
             `The id provided to getItemIndex must be a string. Received ${id}(${typeof id})`
             );
         }
-        const index = this.#items.findIndex((item) => {
+        const index = this.items.findIndex((item) => {
         console.log("AdminJobSheet -> getItemIndex -> item", item)
             return item.id === id;
         });
@@ -58,7 +58,7 @@ export default class AdminJobSheet {
         if (!~index) {
             return null;
         }
-        const targetItem = this.#items[index];
+        const targetItem = this.items[index];
         return { ...targetItem }; 
     }
 
@@ -73,7 +73,7 @@ export default class AdminJobSheet {
         console.log("AdminJobSheet -> addItem -> newItem", newItem)
     
         // push it into our internal array
-        this.#items.push(newItem);
+        this.items.push(newItem);
     
         this.save();
     
@@ -96,7 +96,7 @@ export default class AdminJobSheet {
     
         // Get old item
         const targetItemIndex = this.getItemIndex(id);
-        const targetItem = this.#items[targetItemIndex];
+        const targetItem = this.items[targetItemIndex];
     
         if (!targetItem) {
             throw new Error(`Item not found`);
@@ -109,7 +109,7 @@ export default class AdminJobSheet {
         });
     
         // Remove the old and insert the new
-        this.#items.splice(targetItemIndex, 1, updatedItem);
+        this.items.splice(targetItemIndex, 1, updatedItem);
         this.save();
         return { ...updatedItem }; // before returning the new item
     }
@@ -123,14 +123,14 @@ export default class AdminJobSheet {
         if (!~index) {
             return null;
         }
-        const deleted = this.#items.splice(index, 1);
+        const deleted = this.items.splice(index, 1);
         this.save();
         console.log('save called')
         return deleted;
     }
 
     save() {
-        localStorage.setItem("items", JSON.stringify(this.#items));
+        localStorage.setItem("items", JSON.stringify(this.items));
     }
 
 

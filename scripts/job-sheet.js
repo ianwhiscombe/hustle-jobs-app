@@ -102,7 +102,7 @@ const placeholderJobs = [
 // creates app that controls JobItem instances
 export default class JobSheet {
     // private field
-    #items = [...placeholderJobs];
+    items = [...placeholderJobs];
 
     constructor(itemsDataArray = []) {
         if (!Array.isArray(itemsDataArray)) {
@@ -113,16 +113,16 @@ export default class JobSheet {
         console.log("JobSheet -> constructor -> stored", stored)
 
         for (const item of stored) {
-            this.#items.push(item);
+            this.items.push(item);
         }
 
         for (const itemData of itemsDataArray) {
-            this.#items.push(new JobItem(itemData));
+            this.items.push(new JobItem(itemData));
         }
     }
 
     // get all job items and return a copy of the array
     getAllItems() {
-        return this.#items.slice();
+        return this.items.slice();
     }
 }
