@@ -7,10 +7,10 @@
             "edge": "17",
             "firefox": "80",
             "chrome": "67",
-            "safari": "13.1",
+            "safari": "13.1"
           },
           "useBuiltIns": "usage",
-          "corejs": "3.6.4",
+          "corejs": "3.6.4"
         }
       ]
     ]
