@@ -1,14 +1,13 @@
 import JobSheet from "./job-sheet.js"
 
 const jobsheet = new JobSheet();
-console.log("jobsheet", jobsheet)
+
 
 const mountNode = document.getElementById('job-card-mount');
 const countNode = document.getElementById('job-count');
 
 function render() {
     const jobItems = jobsheet.getAllItems();
-    console.log("render -> jobItems", jobItems)
 
     const fragment = document.createDocumentFragment();
 

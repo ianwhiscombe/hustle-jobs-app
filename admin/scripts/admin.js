@@ -1,7 +1,6 @@
 import AdminJobSheet from './admin-job-sheet.js'
 
 const jobSheet = new AdminJobSheet();
-console.log("jobSheet", jobSheet)
 const clearButton = document.getElementById("clearData");
 const jobCount = jobSheet.getAllItems().length;
 
@@ -68,14 +67,11 @@ if (mountNode) {
 
     mountNode.addEventListener("click", (event) => {
         const { target } = event;
-        console.log("target", target)
 
         if (
             target.closest("button.delete")
         ) {
-        console.log("delete");
         const id = target.closest("button.delete").dataset.id;
-        console.log(`id for deletion: ${id}`);
         jobSheet.removeItem(id);
         target.closest("li").remove();
         GrowlNotification.notify({
@@ -93,13 +89,11 @@ if (mountNode) {
 }
 
 const addForm = document.forms["add-form"];
-console.log("addForm", addForm);
 
 if (addForm) {
     addForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(addForm));
-        console.log("add data", data);
         jobSheet.addItem(data);
         addForm.reset();
         GrowlNotification.notify({
@@ -114,13 +108,11 @@ if (addForm) {
                 action: {
                     text: 'View Job',
                     callback: function() {
-                        console.log('hello')
                         window.location.replace('/admin/index.html')
                     }
                 },
                 cancel: {
                     text: 'Add New Job',
-                    // callback: function() {} 
                 }
             },
         });
@@ -130,16 +122,12 @@ if (addForm) {
 }
 
 const updateForm = document.forms["update-form"];
-console.log("updateForm", updateForm);
 
 if (updateForm) {
     // Get id and populate form
     var params = new URLSearchParams(window.location.search);
-    console.log("params", params)
     const id = params.get("id");
-    console.log("id", id)
     const itemToUpdate = jobSheet.getItemById(id);
-    console.log("render -> itemToUpdate", itemToUpdate)
     populate(updateForm, itemToUpdate);
 
     // handle submit
@@ -147,7 +135,6 @@ if (updateForm) {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(updateForm));
         data._id = id;
-        console.log("update data", data, id);
         jobSheet.updateItem(data);
         updateForm.reset();
         location.href = "/admin/index.html";
@@ -206,16 +193,6 @@ function populate(form, data) {
             }
             break;
             }
-            // case "select":
-            // case "select-one":
-            //   element.value = value.toString() || value;
-            //   break;
-    
-            // case "date":
-            //   element.value = new Date(value).toISOString().split("T")[0];
-            //   break;
-    
-            // text boxes
             default:
             element.value = value;
             break;

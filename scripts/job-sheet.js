@@ -32,8 +32,6 @@ export class JobItem {
         }
         // unique number for id
         this.id = create_UUID();
-        // this.id = String(Math.random());
-        // third option for random number is the UUI lib.
         this.name = name;
         this.location = location;
         this.duration = duration;
@@ -109,7 +107,7 @@ export default class JobSheet {
         }
 
         const stored = JSON.parse(localStorage.getItem("items")) || [];
-        console.log("JobSheet -> constructor -> stored", stored)
+        
 
         for (const item of stored) {
             this.items.push(item);

@@ -41,7 +41,6 @@ export default class AdminJobSheet {
             );
         }
         const index = this.items.findIndex((item) => {
-        console.log("AdminJobSheet -> getItemIndex -> item", item)
             return item.id === id;
         });
     
@@ -62,14 +61,12 @@ export default class AdminJobSheet {
     }
 
     addItem(itemData) {
-    console.log("AdminJobSheet -> addItem -> itemData", itemData)
         
         if (!itemData) {
             throw new Error(`No data provided to addItem: received ${itemData}`);
         }
     
         const newItem = new JobItem(itemData);
-        console.log("AdminJobSheet -> addItem -> newItem", newItem)
     
         // push it into our internal array
         this.items.push(newItem);
@@ -77,7 +74,6 @@ export default class AdminJobSheet {
         this.save();
     
         // Return the finished product for reference
-        console.log("AdminJobSheet -> addItem -> newItem", newItem)
         return { ...newItem };
     }
 
@@ -114,7 +110,6 @@ export default class AdminJobSheet {
     }
 
     removeItem(id) {
-        console.log('removeItem firing')
         if (!id) {
             throw new Error(`No id provided to removeItem: received ${id}`);
         }
@@ -124,7 +119,6 @@ export default class AdminJobSheet {
         }
         const deleted = this.items.splice(index, 1);
         this.save();
-        console.log('save called')
         return deleted;
     }
 
