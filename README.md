@@ -9,7 +9,8 @@
   </a>
 </p>
 
-> HTML, CSS and JS CRUD Task Rabbit inspired app. Users can view available jobs and contact hosts, an admin/my account section allows users to post their own jobs. Uses local storage web API. 
+> HTML, CSS and JS CRUD Task Rabbit inspired app. Users can view available jobs and contact hosts, an admin/my account section allows users to post their own jobs. Uses local storage web API. Existing jobs can be amended and deleted via my account. 
+ 
 
 ### 🏠 [Homepage](https://github.com/ianwhiscombe/hustle-jobs-app)
 
